@@ -9,7 +9,7 @@
             margin: 0 auto;
             padding: 0 2em;
             font-family: sans-serif;
-            font-size: 0.7rem;
+            font-size: 0.9rem;
             line-height: 1.5;
             display: flex;
             gap: 2em;
@@ -58,7 +58,10 @@
         }
 
         .sidebar h1 {
-            font-size: 1.4rem;
+            display: block;
+            margin: 0 auto 0 auto;
+            width: fit-content;
+<!--            font-size: 2rem;-->
             margin-bottom: 0.5em;
         }
 
@@ -88,11 +91,11 @@
 
         /* Toggle button */
         #mode-toggle {
-            position: fixed;
-            top: 1em;
-            right: 1em;
-            padding: 0.3em 0.6em;
-            font-size: 0.7rem;
+            display: block;
+            margin: 1em auto 0 auto;
+            width: fit-content;
+            padding: 0.6em 1.2em;
+            font-size: 0.9rem;
             cursor: pointer;
             border: none;
             border-radius: 5px;
@@ -108,17 +111,17 @@
     </style>
 </head>
 <body>
-    <!-- Dark mode toggle button -->
-    <button id="mode-toggle">Light Mode</button>
-
     <!-- Left column -->
     <div class="sidebar">
         <img src="grgur.jpg" alt="Grgur Kovač">
 
-    <h1>Grgur Kovač</h1>
-        <p><b>Email:</b> kovac.grgur@gmail.com</p>
-        <p><b>Twitter:</b> <a href="https://twitter.com/KovacGrgur" target="_blank">@KovacGrgur</a></p>
-        <p><b>Bluesky:</b> <a href="https://bsky.app/profile/kovacgrgur.bsky.social" target="_blank">@kovacgrgur.bsky.social</a></p>
+        <h1>Grgur Kovač</h1>
+            <p><b>Email:</b> kovac.grgur@gmail.com</p>
+            <p><b>Twitter:</b> <a href="https://twitter.com/KovacGrgur" target="_blank">@KovacGrgur</a></p>
+            <p><b>Bluesky:</b> <a href="https://bsky.app/profile/kovacgrgur.bsky.social" target="_blank">@kovacgrgur.bsky.social</a></p>
+
+        <button id="mode-toggle">Light Mode</button>
+
     </div>
 
     <!-- Right column -->
