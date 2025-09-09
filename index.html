@@ -5,12 +5,45 @@
     <title>Grgur Kovač</title>
     <style>
         body {
-            max-width: 45em;
-            margin-left: auto;
-            margin-right: auto;
+            max-width: 60em;
+            margin: 0 auto;
+            padding: 0 2em;
             font-family: sans-serif;
-            font-size: 0.8rem;
-            line-height: 1.4;
+            font-size: 0.7rem;
+            line-height: 1.5;
+            display: flex;
+            gap: 2em;
+            position: relative; /* allow sidebar to position relative to this */
+        }
+
+        .sidebar {
+            position: fixed;
+            top: 2em;
+            left: 50%;          /* start from the middle */
+            transform: translateX(-30em); /* pull it left by a fixed amount */
+            width: 15em;
+        }
+
+        .sidebar img {
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 1em;
+        }
+
+        .sidebar h1 {
+            font-size: 1.4rem;
+            margin-bottom: 0.5em;
+        }
+
+        .sidebar p {
+            margin: 0.3em 0;
+            font-size: 0.6rem;
+        }
+
+        /* Right column */
+        .content {
+            margin-left: 19em; /* space for fixed sidebar */
+            flex: 1;
         }
 
         ul li {
@@ -18,76 +51,86 @@
         }
 
         #publications {
-            font-size: 0.6;  /* smaller font for everything inside */
+            font-size: 0.85rem;
         }
 
         #publications ul {
-            padding-left: 1em;    /* remove default padding */
-            margin-left: 0;     /* remove default margin */
+            padding-left: 1em;
+            margin-left: 0;
         }
     </style>
 </head>
 <body>
+    <!-- Left column -->
+    <div class="sidebar">
+        <!--        <img src="ggrg.jpg" alt="Grgur Kovač">-->
+<!--        <img src="grg.jpg" alt="Grgur Kovač">-->
+        <img src="grgur.jpg" alt="Grgur Kovač">
+
     <h1>Grgur Kovač</h1>
-    <p>Hello, I am a PhD student in the Flowers Team (INRIA, Bordeaux). My research concerns the socio-cultural aspects of AI and how psychology and human sciences can be leveraged to better characterize, evaluate, and build LLMs and RL agents.</p>
-    <p>
-        My defense is scheduled for November 2025. You can see my thesis <a href="thesis.pdf" target="_blank">here</a>.
-    </p>
-
-    <h2>Projects</h2>
-
-    <p>
-    You can see my projects below:
-    </p>
-
-    <ul>
-        <li> <a href="https://arxiv.org/abs/2504.03814" target="_blank">Recursive Training Loops in LLMs </a> - How training data properties modulate distribution shift in generated data? </li>
-        <li> <a href="https://huggingface.co/spaces/flowers-team/StickToYourRoleLeaderboard" target="_blank">Stick to your Role! Leaderboard </a> - a leaderboard based on and extending the paper</li>
-        <li> <a href="https://sites.google.com/view/llmvaluestability" target="_blank">Stick to your Role! Stability of Personal Values Expressed in Large Language Models (paper)</a> - a study of Personal Value stability in LLMs
-        <li> <a href="https://sites.google.com/view/llm-superpositions" target="_blank">Large Language Models as superpositions of cultural perspectives</a>  - a positioning regarding the influence of context on the expression of culture in LLMs </li>
-        <li> <a href="https://sites.google.com/view/socialai-school" target="_blank">The SocialAI school</a> - a perspective based on developmental psychology, and a tool facilitating research into socio-cognitive abilities of AI agents </li>
-        <li> <a href="https://sites.google.com/view/grimgep" target="_blank"> GRIMGEP: Learning Progress for Robust Goal Sampling in Visual Deep Reinforcement Learning</a> - study of intrinsically motivated goal-based exploration with RL </li>
-    </ul>
-
-    <p>
-    Other projects:
-    <ul>
-        <li> <a href="https://arxiv.org/abs/2407.04503" target="_blank">When LLMs Play the Telephone Game </a> - Cumulative Changes and Attractors in Iterated Cultural Transmissions </li>
-        <li> <a href="https://hal-bioemco.ccsd.cnrs.fr/ENSTA_U2IS/hal-04861896v1" target="_blank">Autotelic LLM-based exploration for goal-conditioned RL </a> - open-ended exploration with LLMs and RL</li>
-    </ul>
-    </p>
-
-    <h2>Publications</h2>
-    <p></p> See my <a href="https://scholar.google.com/citations?user=ZLA7iioAAAAJ&hl=en&authuser=1" target="_blank">Google Scholar</a></p></p>
-    <div id="publications">
-    <p>Conferences: </p>
-    <ul>
-        <li><b>Grgur Kovač*</b>, Jérémy Perez*, Rémy Portelas, Peter Ford Dominey, and Pierre-Yves Oudeyer. 2025. Recursive Training Loops in LLMs: How training data properties modulate distribution shift in generated data? In Proceedings of the 2025 Conference on Empirical Methods in Natural Language Processing (EMNLP 2025)</li>
-        <li><b>Grgur Kovač</b>, Rémy Portelas, Masataka Sawayama, Peter Ford Dominey, and Pierre-Yves Oudeyer (2024b). ‘Stick to your Role! Stability of Personal Values Expressed in Large Language Models’. In: Proceedings of the Annual Meeting of the Cognitive Science Society. Vol. 46 (CogSci 2024)</li>
-        <li> Jérémy Perez, <b>Grgur Kovač</b>, Corentin Léger, Cédric Colas, Gaia Molinaro, Maxime Derex, Pierre-Yves Oudeyer, and Clément Moulin-Frier (2025). ‘When LLMs Play the Telephone Game: Cultural Attractors as Conceptual Tools to Evaluate LLMs in Multi-turn Settings’. In: The Thirteenth International Conference on Learning Representations (ICLR 2025) </li>
-    </ul>
-    <p>Journals:</p>
-    <ul>
-        <li><b>Grgur Kovač</b>, Rémy Portelas, Masataka Sawayama, Peter Ford Dominey, and Pierre-Yves Oudeyer (Aug. 2024a). ‘Stick to your role! Stability of personal values expressed in large language models’. In: PLOS ONE 19.8</li>
-        <li><b>Grgur Kovač</b>, Rémy Portelas, Peter Ford Dominey, and Pierre-Yves Oudeyer (2024). ‘The SocialAI school: a framework leveraging developmental psychology toward artificial socio-cultural agents’. In: Frontiers in Neurorobotics Volume 18 - 2024</li>
-        <li><b>Grgur Kovač</b>, Adrien Laversanne-Finot, and Pierre-Yves Oudeyer (2022). ‘Grimgep: learning progress for robust goal sampling in visual deep reinforcement learning’. In: IEEE Transactions on Cognitive and Developmental Systems 15.3</li>
-    </ul>
-    <p>Preprints:</p>
-    <ul>
-        <li><b>Grgur Kovač</b>, Masataka Sawayama, Rémy Portelas, Cédric Colas, Peter Ford Dominey, and Pierre-Yves Oudeyer (2023). ‘Large language models as superpositions of cultural perspectives’. In: arXiv preprint arXiv:2307.07870</li>
-    </ul>
-    <p>Workshops:</p>
-    <ul>
-        <li><b>Grgur Kovač</b>*, Rémy Portelas*, Katja Hofmann, and Pierre-Yves Oudeyer (June 2021). ‘SocialAI 0.1: Towards a Benchmark to Stimulate Research on Socio-Cognitive Abilities in Deep Reinforcement Learning Agents’. In: NAACL. Accepted at NAACL ViGIL Workshop 2021. Mexico City, Mexico (Spotlight) </li>
-        <li><b>Grgur Kovač</b>, Rémy Portelas, Peter Ford Dominey, and Pierre-Yves Oudeyer (July 2023). ‘The SocialAI School: Insights from Developmental Psychology Towards Artificial Socio-Cultural Agents’. In: TOM 2023 -First Workshop on Theory of Mind in Communicating Agents - ICML 2023 Workshop. Honolulu (Hawaii), United States</li>
-        <li>Guillaume Pourcel, Thomas Carta, <b>Grgur Kovač</b>, and Pierre-Yves Oudeyer (2024). ‘Autotelic LLM-based exploration for goal-conditioned RL’. In: Intrinsically Motivated Open-ended Learning Workshop at NeurIPS 2024</li>
-    </ul>
-        * equal contribution
+        <p><b>Email:</b> kovac.grgur@gmail.com</p>
+        <p><b>Twitter:</b> <a href="https://twitter.com/KovacGrgur" target="_blank">@KovacGrgur</a></p>
+        <p><b>Bluesky:</b> <a href="https://bsky.app/profile/kovacgrgur.bsky.social" target="_blank">@kovacgrgur.bsky.social</a></p>
     </div>
 
-    <h2>Contact</h2>
-    <p>email: kovac.grgur@gmail.com</p>
-    <p></p>twitter: <a href="https://twitter.com/KovacGrgur" target="_blank">@KovacGrgur</a></p>
-    <p></p>bluesky: <a href="https://bsky.app/profile/kovacgrgur.bsky.social" target="_blank">@kovacgrgur.bsky.social</a></p>
+    <!-- Right column -->
+    <div class="content">
+        <h2>About me</h2>
+        <p>Hello, I am a PhD student in the Flowers Team (INRIA, Bordeaux). My research concerns the socio-cultural aspects of AI and how psychology and human sciences can be leveraged to better characterize, evaluate, and build LLMs and RL agents.</p>
+        <p>
+            My defense is scheduled for November 2025. You can see my thesis <a href="thesis.pdf" target="_blank">here</a>.
+        </p>
+
+        <h2>Projects</h2>
+
+        <p>
+        You can see my projects below:
+        </p>
+
+        <ul>
+            <li> <a href="https://arxiv.org/abs/2504.03814" target="_blank">Recursive Training Loops in LLMs </a> - How training data properties modulate distribution shift in generated data? </li>
+            <li> <a href="https://huggingface.co/spaces/flowers-team/StickToYourRoleLeaderboard" target="_blank">Stick to your Role! Leaderboard </a> - a leaderboard based on and extending the paper</li>
+            <li> <a href="https://sites.google.com/view/llmvaluestability" target="_blank">Stick to your Role! Stability of Personal Values Expressed in Large Language Models (paper)</a> - a study of Personal Value stability in LLMs
+            <li> <a href="https://sites.google.com/view/llm-superpositions" target="_blank">Large Language Models as superpositions of cultural perspectives</a>  - a positioning regarding the influence of context on the expression of culture in LLMs </li>
+            <li> <a href="https://sites.google.com/view/socialai-school" target="_blank">The SocialAI school</a> - a perspective based on developmental psychology, and a tool facilitating research into socio-cognitive abilities of AI agents </li>
+            <li> <a href="https://sites.google.com/view/grimgep" target="_blank"> GRIMGEP: Learning Progress for Robust Goal Sampling in Visual Deep Reinforcement Learning</a> - study of intrinsically motivated goal-based exploration with RL </li>
+        </ul>
+
+        <p>
+        Other projects:
+        <ul>
+            <li> <a href="https://arxiv.org/abs/2407.04503" target="_blank">When LLMs Play the Telephone Game </a> - Cumulative Changes and Attractors in Iterated Cultural Transmissions </li>
+            <li> <a href="https://hal-bioemco.ccsd.cnrs.fr/ENSTA_U2IS/hal-04861896v1" target="_blank">Autotelic LLM-based exploration for goal-conditioned RL </a> - open-ended exploration with LLMs and RL</li>
+        </ul>
+        </p>
+
+        <h2>Publications</h2>
+        <p></p> See my <a href="https://scholar.google.com/citations?user=ZLA7iioAAAAJ&hl=en&authuser=1" target="_blank">Google Scholar</a></p></p>
+        <div id="publications">
+            <p>Conferences: </p>
+            <ul>
+                <li><b>Grgur Kovač*</b>, Jérémy Perez*, Rémy Portelas, Peter Ford Dominey, and Pierre-Yves Oudeyer. 2025. Recursive Training Loops in LLMs: How training data properties modulate distribution shift in generated data? In Proceedings of the 2025 Conference on Empirical Methods in Natural Language Processing (EMNLP 2025)</li>
+                <li><b>Grgur Kovač</b>, Rémy Portelas, Masataka Sawayama, Peter Ford Dominey, and Pierre-Yves Oudeyer (2024b). ‘Stick to your Role! Stability of Personal Values Expressed in Large Language Models’. In: Proceedings of the Annual Meeting of the Cognitive Science Society. Vol. 46 (CogSci 2024)</li>
+                <li> Jérémy Perez, <b>Grgur Kovač</b>, Corentin Léger, Cédric Colas, Gaia Molinaro, Maxime Derex, Pierre-Yves Oudeyer, and Clément Moulin-Frier (2025). ‘When LLMs Play the Telephone Game: Cultural Attractors as Conceptual Tools to Evaluate LLMs in Multi-turn Settings’. In: The Thirteenth International Conference on Learning Representations (ICLR 2025) </li>
+            </ul>
+            <p>Journals:</p>
+            <ul>
+                <li><b>Grgur Kovač</b>, Rémy Portelas, Masataka Sawayama, Peter Ford Dominey, and Pierre-Yves Oudeyer (Aug. 2024a). ‘Stick to your role! Stability of personal values expressed in large language models’. In: PLOS ONE 19.8</li>
+                <li><b>Grgur Kovač</b>, Rémy Portelas, Peter Ford Dominey, and Pierre-Yves Oudeyer (2024). ‘The SocialAI school: a framework leveraging developmental psychology toward artificial socio-cultural agents’. In: Frontiers in Neurorobotics Volume 18 - 2024</li>
+                <li><b>Grgur Kovač</b>, Adrien Laversanne-Finot, and Pierre-Yves Oudeyer (2022). ‘Grimgep: learning progress for robust goal sampling in visual deep reinforcement learning’. In: IEEE Transactions on Cognitive and Developmental Systems 15.3</li>
+            </ul>
+            <p>Preprints:</p>
+            <ul>
+                <li><b>Grgur Kovač</b>, Masataka Sawayama, Rémy Portelas, Cédric Colas, Peter Ford Dominey, and Pierre-Yves Oudeyer (2023). ‘Large language models as superpositions of cultural perspectives’. In: arXiv preprint arXiv:2307.07870</li>
+            </ul>
+            <p>Workshops:</p>
+            <ul>
+                <li><b>Grgur Kovač</b>*, Rémy Portelas*, Katja Hofmann, and Pierre-Yves Oudeyer (June 2021). ‘SocialAI 0.1: Towards a Benchmark to Stimulate Research on Socio-Cognitive Abilities in Deep Reinforcement Learning Agents’. In: NAACL. Accepted at NAACL ViGIL Workshop 2021. Mexico City, Mexico (Spotlight) </li>
+                <li><b>Grgur Kovač</b>, Rémy Portelas, Peter Ford Dominey, and Pierre-Yves Oudeyer (July 2023). ‘The SocialAI School: Insights from Developmental Psychology Towards Artificial Socio-Cultural Agents’. In: TOM 2023 -First Workshop on Theory of Mind in Communicating Agents - ICML 2023 Workshop. Honolulu (Hawaii), United States</li>
+                <li>Guillaume Pourcel, Thomas Carta, <b>Grgur Kovač</b>, and Pierre-Yves Oudeyer (2024). ‘Autotelic LLM-based exploration for goal-conditioned RL’. In: Intrinsically Motivated Open-ended Learning Workshop at NeurIPS 2024</li>
+            </ul>
+                * equal contribution
+        </div>
+    </div>
 
 </body>
