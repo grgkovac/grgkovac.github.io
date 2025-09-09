@@ -135,34 +135,17 @@
         <img src="grgur.jpg" alt="Grgur Kovač">
 
         <h1>Grgur Kovač</h1>
+        <i id="play-sound" class="fa-solid fa-volume-up" style="cursor:pointer; font-size:0.8em; margin-left:0.3em;"></i>
+        <audio id="name-audio" src="name.mp3"></audio>
+
+
         <p><i class="fas fa-envelope"></i> <a href="mailto:kovac.grgur@gmail.com">kovac.grgur@gmail.com</a></p>
         <p><i class="fab fa-twitter"></i> <a href="https://twitter.com/KovacGrgur" target="_blank">Twitter/X</a></p>
         <p><i class="fab fa-bluesky"></i> <a href="https://bsky.app/profile/kovacgrgur.bsky.social" target="_blank"</i>Bluesky</a></p>
         <p><i class="fab fa-linkedin-in"></i> <a href="https://www.linkedin.com/in/grgur-kovač-014ab0352" target="_blank">LinkedIn</a></p>
-        <p><i class="fa-brands fa-google-scholar"></i> <a href="" target="_blank">Google Scholar</a></p>
+        <p><i class="fa-brands fa-google-scholar"></i> <a href="https://scholar.google.com/citations?user=ZLA7iioAAAAJ&hl=en" target="_blank">Google Scholar</a></p>
         <p><i class="fas fa-file-alt"></i> <a href="cv.pdf" target="_blank">CV</a></p>
 
-<!--        <br>-->
-<!--        <p><a href="mailto:kovac.grgur@gmail.com"><i class="fas fa-envelope"></i> kovac.grgur@gmail.com</a></p>-->
-<!--        <p><a href="https://twitter.com/KovacGrgur" target="_blank"><i class="fab fa-twitter"></i> Twitter/X</a></p>-->
-<!--        <p><a href="https://bsky.app/profile/kovacgrgur.bsky.social" target="_blank"><i class="fab fa-bluesky"></i> Bluesky</a></p>-->
-<!--        <p><a href="https://www.linkedin.com/in/grgur-kovač-014ab0352" target="_blank"><i class="fab fa-linkedin-in"></i> LinkedIn</a></p>-->
-<!--        <p><a href="" target="_blank"><i class="fa-brands fa-google-scholar"></i> Google Scholar</a></p>-->
-<!--        <p><a href="cv.pdf" target="_blank"><i class="fas fa-file-alt"></i> CV</a></p>-->
-
-<!--        <br>-->
-<!--        <p><a href="mailto:kovac.grgur@gmail.com"><i class="fas fa-envelope"></i> kovac.grgur@gmail.com</a></p>-->
-<!--        <div class="social-icons" justify-content="space-between">-->
-<!--          <a href="https://twitter.com/KovacGrgur" target="_blank"><i class="fab fa-twitter"></i></a>-->
-<!--          <a href="https://bsky.app/profile/kovacgrgur.bsky.social" target="_blank"><i class="fab fa-bluesky"></i></a>-->
-<!--          <a href="https://www.linkedin.com/in/grgur-kovač-014ab0352" target="_blank"><i class="fab fa-linkedin-in"></i></a>-->
-<!--          <a href="https://scholar.google.com/citations?user=ZLA7iioAAAAJ&hl=en" target="_blank"><i class="fa-brands fa-google-scholar"></i></a>-->
-<!--          <a href="https://scholar.google.com/citations?user=ZLA7iioAAAAJ&hl=en" target="_blank"><i class="ai ai-google-scholar"></i></a>-->
-<!--          <a href="cv.pdf" target="_blank"><i class="ai ai-cv"></i></a>-->
-<!--        </div>-->
-
-
-<!--        <button id="mode-toggle">Light Mode</button>-->
         <button id="mode-toggle">
             <i class="fa-solid fa-circle-half-stroke"></i>
         </button>
@@ -233,6 +216,7 @@
     </div>
 
     <script>
+        // night day mode toggle
         const toggleBtn = document.getElementById('mode-toggle');
         const body = document.body;
 
@@ -244,6 +228,16 @@
                 toggleBtn.innerHTML = '<i class="fa-solid fa-circle-half-stroke"></i>';
             }
         });
+
+        // name sound
+        const playBtn = document.getElementById('play-sound');
+        const nameAudio = document.getElementById('name-audio');
+
+        playBtn.addEventListener('click', () => {
+          nameAudio.currentTime = 0; // restart if clicked again
+          nameAudio.play();
+        });
+
     </script>
 </body>
 </html>
