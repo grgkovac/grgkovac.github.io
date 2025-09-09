@@ -54,6 +54,7 @@
         .sidebar img {
             width: 100%;
             border-radius: 8px;
+            margin-top: 3em;
             margin-bottom: 1em;
         }
 
@@ -61,7 +62,6 @@
             display: block;
             margin: 0 auto 0 auto;
             width: fit-content;
-<!--            font-size: 2rem;-->
             margin-bottom: 0.5em;
         }
 
@@ -77,16 +77,25 @@
         }
 
         ul li {
-            margin-bottom: 20px;
+            margin-bottom: 0.5em;
         }
 
         #publications {
-            font-size: 0.6rem;
+            font-size: 0.7rem;
         }
 
+        #publications p {
+            margin-bottom: 0.1em;
+            font-size: 0.8rem;
+        }
         #publications ul {
             padding-left: 1em;
             margin-left: 0;
+            margin-top: 0;
+        }
+
+        #publications li {
+            margin-bottom: 0.5em;
         }
 
         /* Toggle button */
@@ -133,8 +142,10 @@
         <p>
             Hello, I am a PhD student in the <a href="https://developmentalsystems.org/publications/">Flowers Team (INRIA, Bordeaux)</a>.
             My research concerns the socio-cultural aspects of AI and how psychology and human sciences can be leveraged to better characterize, evaluate, and build LLMs and RL agents.
-            In doing so particular care is given to when the analogies between humans and machines break so that human science theories and methodologies can be <b>adequately</b> adapted to AI.
+            In doing so particular care is given to when the analogies between humans and machines break so that human science theories and methodologies can be <i>adequately</i> adapted to AI.
             My defense is scheduled for November 5th 2025, and you can see my thesis <a href="thesis.pdf" target="_blank">here</a>.
+        </p>
+        <p>
             Previously, I worked in <a href="https://microblink.com/">Microblink</a> on developing DL models, primarily for vision tasks such a OCR, and then as an engineer in the Flower Team on levering learning progress for autonomous goal-based exploration of RL-agent in the visual domain.
             In my spare time I like to play with old vintage bikes, such as my Gitane Champion du Monde from 1975. :)
         </p>
@@ -144,7 +155,6 @@
         <p>
         You can see my projects below:
         </p>
-
         <ul>
             <li> <a href="https://arxiv.org/abs/2504.03814" target="_blank">Recursive Training Loops in LLMs </a> - How training data properties modulate distribution shift in generated data? </li>
             <li> <a href="https://huggingface.co/spaces/flowers-team/StickToYourRoleLeaderboard" target="_blank">Stick to your Role! Leaderboard </a> - a leaderboard based on and extending the paper</li>
@@ -165,14 +175,11 @@
         <h2>Publications</h2>
         <p></p> See my <a href="https://scholar.google.com/citations?user=ZLA7iioAAAAJ&hl=en&authuser=1" target="_blank">Google Scholar</a></p></p>
         <div id="publications">
-            <p>Conferences: </p>
+            <p>Peer-reviewed: </p>
             <ul>
                 <li><b>Grgur Kovač*</b>, Jérémy Perez*, Rémy Portelas, Peter Ford Dominey, and Pierre-Yves Oudeyer. 2025. Recursive Training Loops in LLMs: How training data properties modulate distribution shift in generated data? In Proceedings of the 2025 Conference on Empirical Methods in Natural Language Processing (EMNLP 2025, Oral)</li>
-                <li><b>Grgur Kovač</b>, Rémy Portelas, Masataka Sawayama, Peter Ford Dominey, and Pierre-Yves Oudeyer (2024b). ‘Stick to your Role! Stability of Personal Values Expressed in Large Language Models’. In: Proceedings of the Annual Meeting of the Cognitive Science Society. Vol. 46 (CogSci 2024)</li>
                 <li> Jérémy Perez, <b>Grgur Kovač</b>, Corentin Léger, Cédric Colas, Gaia Molinaro, Maxime Derex, Pierre-Yves Oudeyer, and Clément Moulin-Frier (2025). ‘When LLMs Play the Telephone Game: Cultural Attractors as Conceptual Tools to Evaluate LLMs in Multi-turn Settings’. In: The Thirteenth International Conference on Learning Representations (ICLR 2025) </li>
-            </ul>
-            <p>Journals:</p>
-            <ul>
+                <li><b>Grgur Kovač</b>, Rémy Portelas, Masataka Sawayama, Peter Ford Dominey, and Pierre-Yves Oudeyer (2024b). ‘Stick to your Role! Stability of Personal Values Expressed in Large Language Models’. In: Proceedings of the Annual Meeting of the Cognitive Science Society. Vol. 46 (CogSci 2024)</li>
                 <li><b>Grgur Kovač</b>, Rémy Portelas, Masataka Sawayama, Peter Ford Dominey, and Pierre-Yves Oudeyer (Aug. 2024a). ‘Stick to your role! Stability of personal values expressed in large language models’. In: PLOS ONE 19.8</li>
                 <li><b>Grgur Kovač</b>, Rémy Portelas, Peter Ford Dominey, and Pierre-Yves Oudeyer (2024). ‘The SocialAI school: a framework leveraging developmental psychology toward artificial socio-cultural agents’. In: Frontiers in Neurorobotics Volume 18 - 2024</li>
                 <li><b>Grgur Kovač</b>, Adrien Laversanne-Finot, and Pierre-Yves Oudeyer (2022). ‘Grimgep: learning progress for robust goal sampling in visual deep reinforcement learning’. In: IEEE Transactions on Cognitive and Developmental Systems 15.3</li>
