@@ -13,14 +13,41 @@
             line-height: 1.5;
             display: flex;
             gap: 2em;
-            position: relative; /* allow sidebar to position relative to this */
+            position: relative;
+            background-color: #1e1e1e; /* dark mode default */
+            color: #e0e0e0;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        /* Light mode overrides */
+        body.light-mode {
+            background-color: #f0f0f0;
+            color: #202020;
+        }
+
+        a {
+            color: #80b3ff;
+            text-decoration: none;
+        }
+
+        body.light-mode a {
+            color: #004080; /* darker blue for visibility on light bg */
+        }
+
+        a:hover {
+            color: #b3d1ff;
+            text-decoration: underline;
+        }
+
+        body.light-mode a:hover {
+            color: #0066cc;
         }
 
         .sidebar {
             position: fixed;
             top: 2em;
-            left: 50%;          /* start from the middle */
-            transform: translateX(-30em); /* pull it left by a fixed amount */
+            left: 50%;
+            transform: translateX(-30em);
             width: 15em;
         }
 
@@ -42,7 +69,7 @@
 
         /* Right column */
         .content {
-            margin-left: 19em; /* space for fixed sidebar */
+            margin-left: 19em;
             flex: 1;
         }
 
@@ -58,13 +85,34 @@
             padding-left: 1em;
             margin-left: 0;
         }
+
+        /* Toggle button */
+        #mode-toggle {
+            position: fixed;
+            top: 1em;
+            right: 1em;
+            padding: 0.3em 0.6em;
+            font-size: 0.7rem;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #444;
+            color: #fff;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        body.light-mode #mode-toggle {
+            background-color: #ccc;
+            color: #000;
+        }
     </style>
 </head>
 <body>
+    <!-- Dark mode toggle button -->
+    <button id="mode-toggle">Light Mode</button>
+
     <!-- Left column -->
     <div class="sidebar">
-        <!--        <img src="ggrg.jpg" alt="Grgur Kovač">-->
-<!--        <img src="grg.jpg" alt="Grgur Kovač">-->
         <img src="grgur.jpg" alt="Grgur Kovač">
 
     <h1>Grgur Kovač</h1>
@@ -133,4 +181,18 @@
         </div>
     </div>
 
+    <script>
+        const toggleBtn = document.getElementById('mode-toggle');
+        const body = document.body;
+
+        toggleBtn.addEventListener('click', () => {
+            body.classList.toggle('light-mode');
+            if (body.classList.contains('light-mode')) {
+                toggleBtn.textContent = 'Dark Mode';
+            } else {
+                toggleBtn.textContent = 'Light Mode';
+            }
+        });
+    </script>
 </body>
+</html>
