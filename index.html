@@ -363,6 +363,7 @@
         <p>
         Other minor projects:
         <ul>
+            <li> <a href="javascript:void(0)" onclick="openChat()">GrgoBot</a> - an AI agent that explains my research </li>
             <li> <a href="https://arxiv.org/abs/2407.04503" target="_blank">When LLMs Play the Telephone Game </a> - Cumulative Changes and Attractors in Iterated Cultural Transmissions </li>
             <li> <a href="https://hal-bioemco.ccsd.cnrs.fr/ENSTA_U2IS/hal-04861896v1" target="_blank">Autotelic LLM-based exploration for goal-conditioned RL </a> - open-ended exploration with LLMs and RL</li>
         </ul>
@@ -535,6 +536,17 @@
 
         sendBtn.addEventListener('click', sendMessage);
         chatInput.addEventListener('keypress', (e) => { if (e.key === 'Enter') sendMessage(); });
+
+        function openChat() {
+            const chatContainer = document.getElementById('chat-container');
+            const chatInput = document.getElementById('chat-input');
+
+            // Remove the collapsed class to show the window
+            chatContainer.classList.remove('collapsed');
+
+            // Optional: Focus the input field for better UX
+            setTimeout(() => chatInput.focus(), 300);
+        }
 
     </script>
 </body>
