@@ -556,6 +556,12 @@
             setTimeout(() => chatInput.focus(), 300);
         }
 
+        window.addEventListener('DOMContentLoaded', () => {
+            if (window.location.hash === '#grgobot') {
+                openChat();
+            }
+        });
+
     </script>
 </body>
 </html>
